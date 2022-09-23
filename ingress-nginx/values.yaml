@@ -1,0 +1,9 @@
+ingress-nginx:
+  controller:
+    config:
+      allow-snippet-annotations: "true"
+      use-proxy-protocol: "true"
+    service:
+      externalTrafficPolicy: "Local"
+      annotations:
+        kubernetes.civo.com/loadbalancer-enable-proxy-protocol: send-proxy-v2
